@@ -7,6 +7,10 @@ export class IndexService {
 
   constructor(private http: HttpService) { }
 
+  getOperators() {
+    return this.http.__get('operators/')
+  }
+
   reportNumber(number: object) {
     return this.http.__post('phone-numbers/create', number)
   }
